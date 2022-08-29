@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: $display;
+}
+  
+.column, .panel{
+flex-grow: 1;
+}
+
+.panel{
+    @extend .container;
+    flex-wrap: wrap;
+}
+
+.element{
+    @include basicStyle
+}
+
+@media (max-width: $tablet) {
+.panel{
+    --m: calc( #{$tablet} - 100%);
+    .element{
+        @include elementTablet
+    }
+    }
+}
+
+@media (max-width: $phone) {
+.panel{
+    --m: calc( #{$phone} - 100%);
+    .element{
+        @include elementPhone
+    }
+    }
+}
+  
+
+

@@ -1,0 +1,59 @@
+:export {
+  quantity: 12;
+}
+
+:export {
+  quantity: 12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container, .panel {
+  display: flex;
+}
+
+.column, .panel {
+  flex-grow: 1;
+}
+
+.panel {
+  flex-wrap: wrap;
+}
+
+.element {
+  min-width: 7.9583333333vw;
+  flex-grow: 1;
+  border: 1px solid white;
+  height: 97vh;
+  flex-basis: calc(var(--m) * 999);
+  background: lime;
+  color: lime;
+  max-width: 8.3333333333%;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    --m: calc( 768px - 100%);
+  }
+  .panel .element {
+    max-width: 16.6666666667%;
+    height: 16.667vw;
+    background: orange;
+    color: orange;
+    height: 48.5vh;
+  }
+}
+@media (max-width: 480px) {
+  .panel {
+    --m: calc( 480px - 100%);
+  }
+  .panel .element {
+    max-width: 33.3333333333%;
+    height: 33.33vw;
+    background: red;
+    color: red;
+    height: 24.25vh;
+  }
+}
