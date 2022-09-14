@@ -129,7 +129,7 @@ a:active { text-decoration: none; color: black;}
     bottom: 55px;
     padding-top: 2px;
     border-radius: 15px;
-    transition-duration: 10s;
+    transition-duration: 1s;
     font-size: 95%;
     font-weight: bold;
     font-family: system-ui;
