@@ -37,7 +37,6 @@ input{
     box-sizing: border-box; 
     text-transform: capitalize;
     box-shadow: 16px 16px 40px #4c5e7036;
-
 }
 
 input:focus {
@@ -62,16 +61,9 @@ article {
 
 
 a:link { text-decoration: none; color: black;}
-
-
 a:visited { text-decoration: none; color: black;}
-
-
 a:hover { text-decoration: none; color: black;}
-
-
 a:active { text-decoration: none; color: black;}
-
 
 .searched{
     margin-left:auto;
@@ -106,9 +98,6 @@ a:active { text-decoration: none; color: black;}
     margin-top: 1vw;
     margin-bottom: 1vw;
     box-shadow: 16px 16px 40px #4c5e7036;
-}
-
-.articulo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +105,9 @@ a:active { text-decoration: none; color: black;}
     position: relative;
     text-align: center;
     color: white;
+    
 }
+
 .articulo input {
     flex-shrink: 0;
     margin: 0;
@@ -138,7 +129,7 @@ a:active { text-decoration: none; color: black;}
     bottom: 55px;
     padding-top: 2px;
     border-radius: 15px;
-    transition-duration: 1s;
+    transition-duration: 10s;
     font-size: 95%;
     font-weight: bold;
     font-family: system-ui;
@@ -167,7 +158,7 @@ a:active { text-decoration: none; color: black;}
     }
     input{
         width: 45vw;
-    max-width: 700px;
+        max-width: 700px;
     }
     .articulo{
         width: 22.75%;
@@ -181,7 +172,7 @@ a:active { text-decoration: none; color: black;}
     }
     input{
         width: 55vw;
-    max-width: 800px;
+        max-width: 800px;
     }
     .articulo{
         width: 47.75%;
