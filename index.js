@@ -1,12 +1,12 @@
 const express = require('express')
-const rutasNoticias = require ('./noticias/routes')
+//const rutasNoticias = require ('./noticias/routes')
 const path = require('path')
 const {engine} = require('express-handlebars');
 
 //PORT
 var PORT = process.env.PORT || 4000;
 
-//inicializar el app
+//INITIALIZE
 const app = express();
 app.use('/assets', express.static(path.join(__dirname,'public')))
 
@@ -16,19 +16,24 @@ app.set('view engine', 'handlebars');
 app.set('views', './views');  //carpeta raiz donde tenemos las vistas
 
 //MIDDLEWARE
-const middleware = function(req,res,next){
+/*const middleware = function(req,res,next){
     console.log('pasa por aqui');
     next();
 }
-app.use('/noticias',middleware,rutasNoticias)
+app.use('/noticias',middleware,rutasNoticias) */
 
 
 
 //RENDERS
 app.get('/', (req,res)=>{
+    //if(req.query.type=="json"){
+    //   var articles = await getNews(undefined)
+    //}
+
     console.log('Homepage loaded');
     res.render('index',{text:'THE NEWS'})
 })
+
 //CSS
 app.get('/assets/estilos.css',)
 app.get('/assets/cute-alert.js',)
