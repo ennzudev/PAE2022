@@ -125,12 +125,12 @@ a:active { text-decoration: none; color: black;}
     background-color: black;
     position: absolute;
     width: 96%;
-    height: 12%;
+    height: 15%;
     bottom: 55px;
     padding-top: 2px;
     border-radius: 15px;
     transition-duration: 1s;
-    font-size: 95%;
+    font-size: 93%;
     font-weight: bold;
     font-family: system-ui;
 }
