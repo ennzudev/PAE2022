@@ -1,0 +1,21 @@
+<form (submit)="buscar()">
+  <input type="text" name="Texto" placeholder="Buscar..." [(ngModel)]="search">
+  <button [disabled] = "!search">Buscar</button>
+</form>
+<p *ngIf="cargando">Cargando...</p>
+
+<h2>Resultados de {{lastSearch | myUpperCase}} </h2>
+<div class="panel">
+  <div>
+    <ul>
+      <li [ngClass]="{'active': current == elemento}" *ngFor="let elemento of noticias">
+        <a (click)="selectNoticia(elemento)">{{elemento.title}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="derecha">
+    <app-noticia-details [item]="current" (onClear)="clearCurrent"></app-noticia-details>
+  </div>
+</div>
+
+
