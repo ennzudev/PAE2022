@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, EventEmitter } from '@angular/core';
-
+import { Component, EventEmitter, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-noticia-details',
   templateUrl: './noticia-details.component.html',
@@ -16,7 +15,6 @@ export class NoticiaDetailsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('Llegaron cambios: ', changes)
   }
 
   clearNoticia(){

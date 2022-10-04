@@ -13,6 +13,7 @@ import { ErrorComponent } from './pages/notFound/error/error.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { MyUpperCasePipe } from './shared/pipes/my-upper-case.pipe';
 import { NoticiaDetailsComponent } from './pages/noticias/noticia-details/noticia-details.component';
+import { NoticiaListComponent } from './pages/noticias/noticia-list/noticia-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NoticiaDetailsComponent } from './pages/noticias/noticia-details/notici
     NotFoundComponent,
     ErrorComponent,
     MyUpperCasePipe,
-    NoticiaDetailsComponent
+    NoticiaDetailsComponent,
+    NoticiaListComponent
   ],
   imports: [
     BrowserModule,
