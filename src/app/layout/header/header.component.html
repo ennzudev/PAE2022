@@ -1,0 +1,11 @@
+<header>
+    <ul>
+        <li><a routerLink="inicio" class="aa" (click)="setHomeClass()">Inicio</a> </li>
+        <li><a routerLink="noticias" class="aa" (click)="setNoticiasClass()">Noticias</a></li>
+    <!-- <li>Favoritos: {{favoritos}}</li> -->
+    </ul>
+    <article id="article" [ngClass]="statusClass" >
+        <h2>Noticias App</h2>
+    </article>
+    
+</header>

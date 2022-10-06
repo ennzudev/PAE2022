@@ -1,0 +1,43 @@
+img{
+    width:70%;
+    height: auto;
+    border-radius: 20px;
+    display:flex;
+    margin: auto;
+}
+
+.description{
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+button{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.cerrar{
+    background-color:crimson;
+    visibility:visible;
+    display: block;
+    margin:auto;
+}
+
+.vermas{
+    background-color: dodgerblue;
+    visibility:visible;
+}
+
+.show{
+    visibility:visible;
+}
