@@ -9,7 +9,8 @@
   <div>
     <ul>
       <li [ngClass]="{'active': current == elemento}" *ngFor="let elemento of noticias">
-        <!-- <input (click)="actualizarFavoritos(elemento.favorito)" type="checkbox" checked [(ngModel)] = "elemento.favorito"> -->
+        <!-- elemento.favorito-->
+        <input (click)="actualizarFavoritos()" type="checkbox" checked [(ngModel)] = "elemento.favorito">
         <a (click)="selectNoticia(elemento)" [routerLink]="elemento.title">{{elemento.title}}</a>
       </li>
     </ul>
