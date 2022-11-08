@@ -1,0 +1,11 @@
+$quantity:12;
+$width: calc(95.5vw/$quantity);
+$height:150px;
+$display:flex;
+$tablet: 768px;
+$phone: 480px;
+
+
+:export {
+    quantity: $quantity;
+}
