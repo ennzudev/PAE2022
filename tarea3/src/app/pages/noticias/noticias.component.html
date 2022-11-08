@@ -1,0 +1,25 @@
+<form (submit)="buscar()" class="searchbar">
+  <input type="text" name="Texto" placeholder="  &#xF002; " id="myInput" style="font-family:Arial, FontAwesome"[(ngModel)]="search">
+  <button [disabled] = "!search" class="haid"></button>
+</form>
+
+
+
+<p *ngIf="cargando">Cargando...</p>
+
+
+
+<div class="panel">
+  
+  <div>
+    <h2 class="buscado" id="new">{{lastSearch | myUpperCase}} </h2>
+    <app-noticia-list (newItemEvent)="selectNoticia($event)" [noticias]="noticias"></app-noticia-list>
+  </div>
+
+  <div class="derecha">
+    <app-noticia-details (newItemEvent)="selectNoticia($event)" (onClear)="clearCurrent" [item]="current"></app-noticia-details>
+  </div>
+
+</div>
+
+

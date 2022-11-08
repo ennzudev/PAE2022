@@ -1,0 +1,8 @@
+<h3 class="arrib">{{noticia.title}}</h3>
+<img src={{noticia.urlToImage}} alt="">
+<p class="description">{{noticia.description}}</p>
+
+<div  *ngIf="noticia.url">
+    <button class="vermas"><a href={{noticia.url}} target="_blank">Ver más</a></button>
+    <button (click)="clearNoticia()" class="cerrar">Cerrar</button>
+</div>
