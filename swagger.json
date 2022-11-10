@@ -1,0 +1,17 @@
+{
+    "swaggerDefinition": {
+        "swagger" : "2.0",
+        "info":{
+            "description" : "Basic api project",
+            "version" : "1.0.0",
+            "title" : "ITESO MEMEGEN API",
+            "contact" :{
+                "author" : "PN",
+                "email" : "is721596@iteso.mx"
+            }
+        },
+        "basePath" : "/",
+        "host" : "localhost:300"
+    },
+    "apis" : ["index.js", "router/index.js"]
+}
