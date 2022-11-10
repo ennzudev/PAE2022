@@ -16,7 +16,7 @@ import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { environment } from 'src/environments/environment.prod';
         {
           id: GoogleLoginProvider.PROVIDER_ID,
           provider: new GoogleLoginProvider(
-            environment.googleId
+            environment.googleId!
           )
         }
       ],
