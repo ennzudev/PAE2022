@@ -1,19 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-h2 {
-    font-size: 40px;
-}
 
-h3{
-    text-align: center;
-}
-
-*{
-    font-family: system-ui;
-    scroll-behavior: smooth;
-    list-style-type: none;
-}
-
-html{
-    -webkit-animation: moveToTop .6s ease both;
-	animation: moveToTop .6s ease both;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

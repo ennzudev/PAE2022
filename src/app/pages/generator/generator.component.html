@@ -1,0 +1,42 @@
+
+<div id="controls">
+
+    <div class="panel">
+        <div>
+            <mat-form-field appearance="outline">
+                <textarea matInput rows="3" id="upper" [(ngModel)]="upper"></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <textarea matInput rows="3" id="lower" [(ngModel)]="lower"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <div>
+                <label for="color">Choose a color: </label>
+                <input matInput name="color" type="color" [(ngModel)]="color">
+            </div>
+            <div>
+                Font size:
+                <mat-slider [(ngModel)]="size" [min]="10" [max]="60"></mat-slider>
+            </div>
+            <div>
+                <button mat-flat-button color="primary" #trigger (click)="chooseFile()">Choose image</button>
+                <input #imageElement accept="image/*" type="file" [(ngModel)]="file" (change)="doOnChange(imageElement)">
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div id="meme" [ngStyle]="{'background-image': 'url('+dataUrl+')'}">
+    <div id="upper"
+    [innerHTML]="upper | nlToBr"
+    [ngStyle]="{'font-size': size+'px', 'line-height': (size+4)+'px', 'color': color}"></div>
+
+    <div id="lower"
+    [innerHTML]="lower | nlToBr"
+    [ngStyle]="{'font-size': size+'px', 'line-height': (size+4)+'px', 'color': color}"></div>
+</div>
+<div class="cta">
+    <button mat-flat-button color="accent" (click)="saveImage()">Guardar</button>
+</div>

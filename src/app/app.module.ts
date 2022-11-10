@@ -1,40 +1,62 @@
-import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './layout/footer/footer.component';
+import { MaterialModule } from './modules/material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NlToBrPipe } from './shared/pipes/nl-to-br.pipe';
+import { SignupComponent } from './pages/signup/signup.component';
+import { GeneratorComponent } from './pages/generator/generator.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ErrorComponent } from './pages/notFound/error/error.component';
-import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { MyUpperCasePipe } from './shared/pipes/my-upper-case.pipe';
-import { NoticiaDetailsComponent } from './pages/noticias/noticia-details/noticia-details.component';
-import { NoticiaDetailsPageComponent } from './pages/noticias/noticia-details-page/noticia-details-page.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NlToBrPipe,
+    SignupComponent,
+    GeneratorComponent,
+    ProfileComponent,
+    LoginComponent,
+    ForbiddenComponent,
     HeaderComponent,
     FooterComponent,
-    NoticiasComponent,
-    HomeComponent,
-    NotFoundComponent,
-    ErrorComponent,
-    MyUpperCasePipe,
-    NoticiaDetailsComponent,
-    NoticiaDetailsPageComponent
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [{
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            environment.googleId
+          )
+        }
+      ],
+      onError: (err) => {
+        console.error(err);
+      }
+    } as SocialAuthServiceConfig,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

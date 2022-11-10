@@ -1,19 +1,10 @@
-#corazon{
-    color:red;
-    vertical-align: middle;
-}
-
-.link{
-    text-decoration: none;
-    color: black;
-    margin-bottom: 30px;
-}
-  
-.link:hover{
-    color:rgb(52, 215, 109);
-    font-weight: bold ;
-}
-.copyright{
-    margin-top: 5%;
+footer {
+    padding: 20px;
     text-align: center;
+    height: 40px;
+
+    span {
+        font-size: 18px;
+        color: darkgray;
+    }
 }

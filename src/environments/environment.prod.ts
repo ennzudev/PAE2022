@@ -1,3 +1,3 @@
 export const environment = {
-  production: true
-};
+  production: true,
+  googleId:process.env["GOOGLE_ID"]};

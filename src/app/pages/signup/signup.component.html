@@ -1,0 +1,32 @@
+<div class="form-container">
+
+    Es valido? {{signupForm.valid}}
+
+    <form [formGroup]="signupForm" (submit)="crearUsuario()">
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="name">
+            <mat-error>Este campo es requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Confirmar Password</mat-label>
+            <input matInput type="password" formControlName="confirm">
+        </mat-form-field>
+
+        <mat-checkbox formControlName="terms">Acepto los terminos y condiciones</mat-checkbox>
+
+        <div>
+            <button mat-flat-button color="primary" [disabled]="signupForm.invalid">Crear</button>
+            <button type="button" mat-flat-button color="warn">Cancelar</button>
+        </div>
+    </form>
+</div>
+

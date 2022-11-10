@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://newsapi.org/v2/',
-  apiKey: 'd429ba86e8de4f62b41b16c9454dbecc'
+  googleId:process.env["GOOGLE_ID"]
+
 };
 
 /*
